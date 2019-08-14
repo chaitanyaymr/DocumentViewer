@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      DOCS
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block full (click)="openLocalPdf()">Open Local</button>
+  <button ion-button block full (click)="downloadAndOpenPDF()">Download and open pdf</button>
+  <div>
+    <label>PDF src</label>
+    <input type="text" placeholder="PDF src" [(ngModel)]="pdfSrc">
+</div>
+<ion-slides pager>
+  <ion-slide >
+    <div style="width:50%;height:50%">
+        <pdf-viewer [src]="pdfSrc" 
+        [render-text]="true"
+        style="display: block;"
+></pdf-viewer>
+    </div>
+    
+  </ion-slide>
+   <ion-slide >
+    <div style="width:50%;height:50%">
+        <pdf-viewer [src]="pdfSrc" 
+        [render-text]="true"
+        style="display: block;"
+></pdf-viewer>
+    </div>
+    
+  </ion-slide>
+</ion-slides>
+
+</ion-content>
