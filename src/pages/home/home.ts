@@ -12,9 +12,12 @@ export class HomePage {
   pdfSrc: string = '/pdf-test.pdf';
   constructor(public navCtrl: NavController,private file:File,private ft:FileTransfer,private doc:DocumentViewer,private platform:Platform) {
 this.pdfSrc="assets/example.pdf";
+
   }
   openLocalPdf()
   {
+   // this.pdfSrc="https://devapi.usegomo.com/Images/CommFiles/Ticket_20190818234930.pdf";
+   this.pdfSrc="https://devapi.usegomo.com/Images/CommFiles/clr_20190820103339.docx";
     const options:DocumentViewerOptions={
       title:'my PDF'
     }
